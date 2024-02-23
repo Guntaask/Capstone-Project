@@ -1,7 +1,7 @@
 # Capstone-Project
 
   
-# ✨ Predict Small Business Success & Failure ✨
+# ✨ Predicting Small Businesses Success & Failure ✨
 ---
 Understanding the Reasons Behind Small Business Failures and Leveraging Machine Learning for Enhanced Success
 
@@ -75,6 +75,8 @@ Ultimately, the potential impact of our data science project lies in its ability
 
 ### Dataset Description 🔤 <a class="anchor" id="desc"></a>
 
+<img src="https://s3-media0.fl.yelpcdn.com/assets/public/960x225_dataset@2x.yji-6d323fc75cb1bec53d1c9851d45e204c.png">
+
 In this project, we're going to use the Yelp Dataset, which has a ton of info about local businesses in the USA and Canada. It's got:
 
 <li>Reviews: There are 6,990,280 reviews in the dataset. These reviews contain valuable feedback and ratings from customers who have visited various businesses.</li>
@@ -104,10 +106,10 @@ Sure, here's a simplified version of the data dictionary for the Yelp Dataset:
 Business ID: Unique identifier for each business.<br>
 Name: Name of the business.<br>
 Address: Address of the business.<br>
-City: City where the business is located.<br>
+City: The city where the business is located.<br>
 State: State where the business is located.<br>
 Postal Code: Postal code of the business.<br>
-Latitude: Latitude coordinate of the business location.<br>
+Latitude: Latitude coordinates of the business location.<br>
 Longitude: Longitude coordinate of the business location.<br>
 Stars: Average rating of the business.<br>
 Review Count: Number of reviews the business has received.<br>
@@ -243,6 +245,7 @@ Calculated median for others and replaced in the dataset.
 
 ### 💬 Conclusion 💬 <a class="anchor" id="conclusion"></a>
 
+<img src="https://i.pinimg.com/736x/fa/66/3f/fa663ff7492b725b04a1f7d9f25192d9.jpg">
 
 In conclusion, our data science project has shed light on a crucial question for entrepreneurs: the likelihood of a business closing or remaining operational. Leveraging machine learning techniques, we've identified key features that contribute to this prediction, providing valuable insights for business owners and investors.
 
