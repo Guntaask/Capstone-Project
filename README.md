@@ -182,13 +182,14 @@ Leveraging pandas' functionality, we applied this mapping to the 'NoiseLevel' va
 
 Logistic Regression can serve as the foundational model for binary classification, where it can learn to predict the probability of a business being open or closed. It can dynamically adjust class weights or employ regularization techniques to ensure robust performance, particularly in handling imbalanced classes.
 
+<b>Decision Tree:</b>
+
+Decision trees can be instrumental in providing interpretable insights into the underlying data patterns. By recursively partitioning the feature space, they will uncover significant predictors of business openness. Techniques such as pruning will be applied to prevent overfitting, ensuring the generalization of the model to unseen data while maintaining transparency in decision-making.
+
 <b>XGBoost:</b>
 
 XGBoost plays a pivotal role as a sophisticated ensemble learning algorithm, capable of capturing complex relationships within the data. It can be extensively fine-tuned, optimizing hyperparameters like scale_pos_weight to effectively handle class imbalance. Through iterative training, XGBoost will strive to achieve superior predictive accuracy and resilience to imbalanced data distributions.
 
-<b>Decision Tree:</b>
-
-Decision trees can be instrumental in providing interpretable insights into the underlying data patterns. By recursively partitioning the feature space, they will uncover significant predictors of business openness. Techniques such as pruning will be applied to prevent overfitting, ensuring the generalization of the model to unseen data while maintaining transparency in decision-making.
 
 <b>Handling Imbalance in 'is_open' Target Variable:</b>
 
