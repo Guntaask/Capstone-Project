@@ -23,6 +23,7 @@ Understanding the Reasons Behind Small Business Failures and Leveraging Machine 
     - [Data Coverage](#data-coverage)
 - [Project Roadmap](#roadmap)
     - [Data Cleaning](#cleaning)
+    - [Modelling](#mod)
  - [Conclusion](#conclusion)
 
 
@@ -118,73 +119,7 @@ Attributes: Additional attributes or features of the business.<br>
 Categories: Categories or types of services offered by the business.<br>
 Hours: Operating hours of the business.<br>
 
-
-{
-
-    // string, 22 character unique string business id
-    "business_id": "tnhfDv5Il8EaGSXZGiuQGg",
-
-    // string, the business's name
-    "name": "Garaje",
-
-    // string, the full address of the business
-    "address": "475 3rd St",
-
-    // string, the city
-    "city": "San Francisco",
-
-    // string, 2 character state code, if applicable
-    "state": "CA",
-
-    // string, the postal code
-    "postal code": "94107",
-
-    // float, latitude
-    "latitude": 37.7817529521,
-
-    // float, longitude
-    "longitude": -122.39612197,
-
-    // float, star rating, rounded to half-stars
-    "stars": 4.5,
-
-    // integer, number of reviews
-    "review_count": 1198,
-
-    // integer, 0 or 1 for closed or open, respectively
-    "is_open": 1,
-
-    // object, business attributes to values. note: some attribute values might be objects
-    "attributes": {
-        "RestaurantsTakeOut": true,
-        "BusinessParking": {
-            "garage": false,
-            "street": true,
-            "validated": false,
-            "lot": false,
-            "valet": false
-        },
-    },
-
-    // an array of strings of business categories
-    "categories": [
-        "Mexican",
-        "Burgers",
-        "Gastropubs"
-    ],
-
-    // an object of key day to value hours, hours are using a 24hr clock
-    "hours": {
-        "Monday": "10:00-21:00",
-        "Tuesday": "10:00-21:00",
-        "Friday": "10:00-21:00",
-        "Wednesday": "10:00-21:00",
-        "Thursday": "10:00-21:00",
-        "Sunday": "11:00-18:00",
-        "Saturday": "10:00-21:00"
-    }
-}
-
+<img src="https://miro.medium.com/v2/resize:fit:1083/0*QXNZVCSHE41DxWAG.png">
 
 <b>Reviews:</b>
 
@@ -227,20 +162,41 @@ Dataset can be found on Yelp
 
 ### ✅ Data Cleaning / Preprocessing 🛁 <a class="anchor" id="cleaning"></a>  
 
+<b>Exploding Nested Attributes:</b>
 
-<b>-Features flattening</b>
-Separated objects of dictionary type into seperate key value columns using reg exp.
+We began by examining columns containing nested attributes, such as the 'attributes' column, which contained JSON-like strings representing various business features.
+To unpack these nested attributes, we employed Python's json.loads() function to convert the JSON-like strings into dictionaries.
+Utilizing pandas' pd.json_normalize() function, we then expanded these dictionaries into separate columns, enabling a more granular analysis of each business feature.<br>
 
-df_business['hours_str'] = df_business['hours'].apply(str)
-df_business[['day', 'time']] = df_business['hours_str'].str.extract(r"'(.*?)': '(.*?)'")
-df_business = df_business.drop(['hours', 'hours_str'], axis=1)
-print(df_business)
+<b>Engineering Categorical Variables:</b>
+
+Upon identifying categorical variables within our dataset, such as 'NoiseLevel', we recognized the need to convert these qualitative descriptors into numerical representations for analysis.
+To achieve this, we crafted a mapping dictionary to translate each categorical value to its corresponding numerical counterpart. For instance, 'quiet' was mapped to 0, 'average' to 1, 'loud' to 2, and 'very_loud' to 3.
+Leveraging pandas' functionality, we applied this mapping to the 'NoiseLevel' variable, ensuring a seamless transition from qualitative descriptors to quantitative values, facilitating further analysis and modeling.
 
 
-<b>- Handling Missing Value</b>
-The percentage of null for categories is much smaller. For the <3% missing columns we can take any reasonable approach. For the hours and attributes columns it may be worth imputing these values as dropping 15.44% and 9.14% of rows may be too much data loss.
 
-Calculated median for others and replaced in the dataset.
+### 💬 Modelling 💬 <a class="anchor" id="mod"></a>
+
+<b>Logistic Regression:</b>
+
+Logistic Regression can serve as the foundational model for binary classification, where it can learn to predict the probability of a business being open or closed. It can dynamically adjust class weights or employ regularization techniques to ensure robust performance, particularly in handling imbalanced classes.
+
+<b>XGBoost:</b>
+
+XGBoost plays a pivotal role as a sophisticated ensemble learning algorithm, capable of capturing complex relationships within the data. It can be extensively fine-tuned, optimizing hyperparameters like scale_pos_weight to effectively handle class imbalance. Through iterative training, XGBoost will strive to achieve superior predictive accuracy and resilience to imbalanced data distributions.
+
+<b>Decision Tree:</b>
+
+Decision trees can be instrumental in providing interpretable insights into the underlying data patterns. By recursively partitioning the feature space, they will uncover significant predictors of business openness. Techniques such as pruning will be applied to prevent overfitting, ensuring the generalization of the model to unseen data while maintaining transparency in decision-making.
+
+<b>Handling Imbalance in 'is_open' Target Variable:</b>
+
+For imbalanced classification of 'is_open', where one class (e.g., open businesses) may be significantly more prevalent than the other (e.g., closed businesses), several strategies can be applied:
+<b>Resampling Techniques:</b> Use techniques like oversampling (e.g., SMOTE), undersampling, or a combination of both to balance the class distribution.
+<b>Algorithmic Approaches: </b>Algorithms like XGBoost, decision trees, and random forests often provide parameters to adjust class weights or explicitly handle class imbalance.
+<b>Ensemble Methods:</b> Ensemble techniques like bagging and boosting can help improve the model's performance on imbalanced data by combining predictions from multiple models trained on balanced subsets.
+<b>Evaluation Metrics: </b>Instead of accuracy, consider using evaluation metrics like precision, recall, F1-score, or area under the ROC curve (ROC-AUC) to assess the model's performance, especially in the context of class imbalance.
 
 
 ### 💬 Conclusion 💬 <a class="anchor" id="conclusion"></a>
