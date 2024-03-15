@@ -193,10 +193,10 @@ Decision trees can be instrumental in providing interpretable insights into the 
 <b>Handling Imbalance in 'is_open' Target Variable:</b>
 
 For imbalanced classification of 'is_open', where one class (e.g., open businesses) may be significantly more prevalent than the other (e.g., closed businesses), several strategies can be applied:
-<b>Resampling Techniques:</b> Use techniques like oversampling (e.g., SMOTE), undersampling, or a combination of both to balance the class distribution.
-<b>Algorithmic Approaches: </b>Algorithms like XGBoost, decision trees, and random forests often provide parameters to adjust class weights or explicitly handle class imbalance.
-<b>Ensemble Methods:</b> Ensemble techniques like bagging and boosting can help improve the model's performance on imbalanced data by combining predictions from multiple models trained on balanced subsets.
-<b>Evaluation Metrics: </b>Instead of accuracy, consider using evaluation metrics like precision, recall, F1-score, or area under the ROC curve (ROC-AUC) to assess the model's performance, especially in the context of class imbalance.
+<b>Resampling Techniques:</b> Use techniques like oversampling (e.g., SMOTE), undersampling, or a combination of both to balance the class distribution.<br>
+<b>Algorithmic Approaches: </b>Algorithms like XGBoost, decision trees, and random forests often provide parameters to adjust class weights or explicitly handle class imbalance.<br>
+<b>Ensemble Methods:</b> Ensemble techniques like bagging and boosting can help improve the model's performance on imbalanced data by combining predictions from multiple models trained on balanced subsets.<br>
+<b>Evaluation Metrics: </b>Instead of accuracy, consider using evaluation metrics like precision, recall, F1-score, or area under the ROC curve (ROC-AUC) to assess the model's performance, especially in the context of class imbalance.<br>
 
 
 ### 💬 Conclusion 💬 <a class="anchor" id="conclusion"></a>
