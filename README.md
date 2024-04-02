@@ -186,13 +186,17 @@ For an imbalanced classification of 'is_open', where one class (e.g., open busin
 <b>Evaluation Metrics: </b>Instead of accuracy, consider using evaluation metrics like precision, recall, F1-score, or area under the ROC curve (ROC-AUC) to assess the model's performance, especially in the context of class imbalance.<br>
 
 
+<center><img width=600 src="https://github.com/Guntaask/Capstone-Project/blob/main/images/Target%20variable.png?raw=true" alt="feature_importance" width="500" height="500"/></center>
+
+In this project, we have used upsampling as it was providing the best result.
+
 ### 💬 Modelling 💬 <a class="anchor" id="mod"></a>
 
 <b>Logistic Regression:</b>
 
 Logistic Regression can serve as the foundational model for binary classification, where it can learn to predict the probability of a business being open or closed. It can dynamically adjust class weights or employ regularization techniques to ensure robust performance, particularly in handling imbalanced classes.
 
-<center><img width=600 src="https://github.com/Guntaask/Capstone-Project/blob/main/images/feature%20importance_log%20reg.png?raw=true" alt="feature_importance" width="400" height="800"/></center>
+<center><img width=600 src="https://github.com/Guntaask/Capstone-Project/blob/main/images/feature%20importance_log%20reg.png?raw=true" alt="feature_importance" width="600" height="800"/></center>
 
 <b>Decision Tree:</b>
 
