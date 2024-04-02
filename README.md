@@ -98,6 +98,8 @@ In this project, we're going to use the Yelp Dataset, which has a ton of info ab
 
 Overall, these features highlight the richness and breadth of the Yelp Dataset, offering a wealth of information for analysis and research purposes.
 
+Click here for the <a href="https://www.yelp.com/dataset">link</a> to the dataset.
+
 ### Data Dictionary 🔖 <a class="anchor" id="data-dict"></a>
 
 Sure, here's a simplified version of the data dictionary for the Yelp Dataset:
@@ -200,6 +202,9 @@ Decision trees can be instrumental in providing interpretable insights into the 
 
 XGBoost plays a pivotal role as a sophisticated ensemble learning algorithm, capable of capturing complex relationships within the data. It can be extensively fine-tuned, optimizing hyperparameters like scale_pos_weight to effectively handle class imbalance. Through iterative training, XGBoost will strive to achieve superior predictive accuracy and resilience to imbalanced data distributions.
 
+### Comparison of Logistic regression vs Decision Trees vs Xgboost
+
+<center><img width=600 src="https://github.com/Guntaask/Capstone-Project/blob/main/images/Screenshot%202024-04-02%20at%2012.18.43%20AM.png?raw=true" alt="memes" width="200" height="400"/></center>
 
 
 ### 💬 Conclusion 💬 <a class="anchor" id="conclusion"></a>
