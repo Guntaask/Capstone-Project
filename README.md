@@ -190,7 +190,7 @@ For an imbalanced classification of 'is_open', where one class (e.g., open busin
 
 Logistic Regression can serve as the foundational model for binary classification, where it can learn to predict the probability of a business being open or closed. It can dynamically adjust class weights or employ regularization techniques to ensure robust performance, particularly in handling imbalanced classes.
 
-<center><img width=600 src="https://drive.google.com/file/d/1nguLfzVlaoqBAh0QUjdW8yAZ4HUxYVaF/view?usp=sharing" alt="memes" width="200"/></center>
+<center><img width=600 src="https://github.com/Guntaask/Capstone-Project/blob/main/images/Screenshot%202024-04-02%20at%2012.18.43%20AM.png?raw=true" alt="memes" width="200" height="400"/></center>
 
 <b>Decision Tree:</b>
 
