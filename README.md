@@ -192,7 +192,7 @@ For an imbalanced classification of 'is_open', where one class (e.g., open busin
 
 Logistic Regression can serve as the foundational model for binary classification, where it can learn to predict the probability of a business being open or closed. It can dynamically adjust class weights or employ regularization techniques to ensure robust performance, particularly in handling imbalanced classes.
 
-<center><img width=600 src="https://github.com/Guntaask/Capstone-Project/blob/main/images/feature%20importance_log%20reg.png?raw=true" alt="feature_importance" width="400" height="600"/></center>
+<center><img width=600 src="https://github.com/Guntaask/Capstone-Project/blob/main/images/feature%20importance_log%20reg.png?raw=true" alt="feature_importance" width="400" height="800"/></center>
 
 <b>Decision Tree:</b>
 
@@ -203,11 +203,11 @@ Decision trees can be instrumental in providing interpretable insights into the 
 XGBoost plays a pivotal role as a sophisticated ensemble learning algorithm, capable of capturing complex relationships within the data. It can be extensively fine-tuned, optimizing hyperparameters like scale_pos_weight to effectively handle class imbalance. Through iterative training, XGBoost will strive to achieve superior predictive accuracy and resilience to imbalanced data distributions.
 
 
-<center><img width=600 src="https://github.com/Guntaask/Capstone-Project/blob/main/images/Feature%20importance_XGB.png?raw=true="feature_importance" width="400" height="600"/></center>
+<center><img width=600 src="https://github.com/Guntaask/Capstone-Project/blob/main/images/Feature%20importance_XGB.png?raw=true="feature_importance" width="600" height="600"/></center>
 
 ### Comparison of Logistic regression vs Decision Trees vs Xgboost
 
-<center><img src="https://github.com/Guntaask/Capstone-Project/blob/main/images/ROC%20Curve%20Comparison.png?raw=true" width="200" height="400"/></center>
+<center><img src="https://github.com/Guntaask/Capstone-Project/blob/main/images/ROC%20Curve%20Comparison.png?raw=true" width="600" height="600"/></center>
 
 Sharp curves in ROC plots suggest models with high discriminative power, indicating effective class separation and accurate predictions. This is often observed in well-trained models with informative features and balanced datasets, leading to clear distinctions between positive and negative instances. We can see that Xgboost is giving the best results.
 
