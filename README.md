@@ -172,8 +172,16 @@ Utilizing pandas' pd.json_normalize() function, we then expanded these dictionar
 
 Upon identifying categorical variables within our dataset, such as 'NoiseLevel', we recognized the need to convert these qualitative descriptors into numerical representations for analysis.
 To achieve this, we crafted a mapping dictionary to translate each categorical value to its corresponding numerical counterpart. For instance, 'quiet' was mapped to 0, 'average' to 1, 'loud' to 2, and 'very_loud' to 3.
-Leveraging pandas' functionality, we applied this mapping to the 'NoiseLevel' variable, ensuring a seamless transition from qualitative descriptors to quantitative values, facilitating further analysis and modeling.
+Leveraging pandas' functionality, we applied this mapping to the 'NoiseLevel' variable, ensuring a seamless transition from qualitative descriptors to quantitative values, facilitating further analysis and modelling.
 
+
+### Handling Imbalance in 'is_open' Target Variable
+
+For an imbalanced classification of 'is_open', where one class (e.g., open businesses) may be significantly more prevalent than the other (e.g., closed businesses), several strategies can be applied:
+<b>Resampling Techniques:</b> Use techniques like oversampling (e.g., SMOTE), undersampling, or a combination of both to balance the class distribution.<br>
+<b>Algorithmic Approaches: </b>Algorithms like XGBoost, decision trees, and random forests often provide parameters to adjust class weights or explicitly handle class imbalance.<br>
+<b>Ensemble Methods:</b> Ensemble techniques like bagging and boosting can help improve the model's performance on imbalanced data by combining predictions from multiple models trained on balanced subsets.<br>
+<b>Evaluation Metrics: </b>Instead of accuracy, consider using evaluation metrics like precision, recall, F1-score, or area under the ROC curve (ROC-AUC) to assess the model's performance, especially in the context of class imbalance.<br>
 
 
 ### 💬 Modelling 💬 <a class="anchor" id="mod"></a>
@@ -181,6 +189,8 @@ Leveraging pandas' functionality, we applied this mapping to the 'NoiseLevel' va
 <b>Logistic Regression:</b>
 
 Logistic Regression can serve as the foundational model for binary classification, where it can learn to predict the probability of a business being open or closed. It can dynamically adjust class weights or employ regularization techniques to ensure robust performance, particularly in handling imbalanced classes.
+
+<center><img width=600 src="https://drive.google.com/file/d/1nguLfzVlaoqBAh0QUjdW8yAZ4HUxYVaF/view?usp=sharing" alt="memes" width="200"/></center>
 
 <b>Decision Tree:</b>
 
@@ -190,14 +200,6 @@ Decision trees can be instrumental in providing interpretable insights into the 
 
 XGBoost plays a pivotal role as a sophisticated ensemble learning algorithm, capable of capturing complex relationships within the data. It can be extensively fine-tuned, optimizing hyperparameters like scale_pos_weight to effectively handle class imbalance. Through iterative training, XGBoost will strive to achieve superior predictive accuracy and resilience to imbalanced data distributions.
 
-
-<b>Handling Imbalance in 'is_open' Target Variable:</b>
-
-For imbalanced classification of 'is_open', where one class (e.g., open businesses) may be significantly more prevalent than the other (e.g., closed businesses), several strategies can be applied:
-<b>Resampling Techniques:</b> Use techniques like oversampling (e.g., SMOTE), undersampling, or a combination of both to balance the class distribution.<br>
-<b>Algorithmic Approaches: </b>Algorithms like XGBoost, decision trees, and random forests often provide parameters to adjust class weights or explicitly handle class imbalance.<br>
-<b>Ensemble Methods:</b> Ensemble techniques like bagging and boosting can help improve the model's performance on imbalanced data by combining predictions from multiple models trained on balanced subsets.<br>
-<b>Evaluation Metrics: </b>Instead of accuracy, consider using evaluation metrics like precision, recall, F1-score, or area under the ROC curve (ROC-AUC) to assess the model's performance, especially in the context of class imbalance.<br>
 
 
 ### 💬 Conclusion 💬 <a class="anchor" id="conclusion"></a>
