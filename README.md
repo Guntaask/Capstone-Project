@@ -40,9 +40,7 @@ This topic matters to businesses who want to stick around and to customers who w
 
 So, the big question we're asking here is: Can we figure out if a business will keep going or not? And what are the main things that tell us if it will?
 
-
-<center><img width=600 src="https://i0.wp.com/warmandtoteonline.blog/wp-content/uploads/2022/10/time-management.png?w=1080&ssl=1" alt="memes" width="200"/></center>
-
+<img width=600 src="https://i0.wp.com/warmandtoteonline.blog/wp-content/uploads/2022/10/time-management.png?w=1080&ssl=1" alt="business-management" width="400"/>
 ### Problem Statement 😩 <a class="anchor" id="problem"></a>
 
 So, the big question we're asking here is: 
@@ -51,7 +49,6 @@ Can we figure out if a business will keep going or not?
 And what are the main features that tell us if it will?
 
 Understanding the Reasons Behind Small Business Failures and Leveraging Machine Learning for Enhanced Success
-
 
 
 
